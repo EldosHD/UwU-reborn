@@ -1,0 +1,45 @@
+[additional specification]
+the program execution starts in the "maiwn" function
+
+[Comment]
+~nyaa This is a comment
+
+[types]
+64 bit signed int: iwnt
+32 bit signed float: floawt
+8 bit char: chaw
+XX bit string: stwing
+1 bit boolean: TODO: boolean (accepts true, True, 1 || false,False,0)
+empty byte: voiwd
+
+[Operators]
+[+] : pwus
+[-] : minwus
+[*] : twimes
+[/] : diwide
+
+[instruction]
+[paws] : noop instruction
+[moans(stwing)]  : print to stdout
+
+
+[assignment]
+foo:stwing iws 'hewwo'
+bar:iwnt iws 5 pwus 10
+foobar:chaw iws awway[5] iws ['h','e','w','w','o']
+foobruh:chaw iws foobar[3]
+
+[conditionals]
+[>]  : 1 gweatew twan 0
+[<]  : 0 wess twan 1
+[==] : 1 eqwall twoo 1
+
+[If-elif-else statement]
+*notices cute eqwall twoo 'yes'*
+    moans('I wuv u UwU')
+but *notices cute eqwall twoo 'a bit'*
+    moans('I wuv u >w<')
+*is oblivious*
+    moans('I wuv u anyway >w<')
+
+
