@@ -3,30 +3,43 @@ start: statement_list
 statement_list: statement | statement statement_list
 
 statement: assignment
+        | operation
     // | block
     // | while_statement
     // | if_statement            
 
-assignment: /\w+/ ":" type "iws" expression
+assignment: var_assignment | array_assignment
 
-type: "iwnt"
+var_assignment: /\w+/ ":" TYPE "iws" expression ";"
+
+array_assignment: /\w+/ ":" TYPE "iws awway[" INT "];"
+    | /\w+/ ":" TYPE "iws awway[" INT "] wif [" (STRING|INT|FLOAT)(","(STRING|INT|FLOAT))* "];"
+
+TYPE: "iwnt"
     | "floawt"
     | "chaw"
     | "stwing"
     | "boolean"
     | "voiwd"
 
-expression: STRING ";"
 
-operator: plus
-    | minus
-    | multiply
-    | divide
+expression: value | statement_list
 
-plus: "pwus"
-minus: "minwus"
-multiply: "twimes"
-divide: "diwide"
+value: STRING
+    | INT
+    | FLOAT
+
+operation: expression operator expression
+
+operator: PLUS
+    | MINUS
+    | MULTIPLY
+    | DIVIDE
+
+PLUS : "pwus"
+MINUS : "minwus"
+MULTIPLY : "twimes"
+DIVIDE : "diwide"
 
 // block: "{" statement_list "}"
 // 
@@ -35,8 +48,8 @@ divide: "diwide"
 // if_statement: block
 
 STRING : /("|').*?(?<!\\)("|')/
-
-%import common.SIGNED_NUMBER    -> NUMBER
+INT : /-?\d+/
+FLOAT : /-?\d+\.\d+/
 
 %import common.WS
 %ignore WS
