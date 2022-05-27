@@ -1,7 +1,7 @@
 [additional specification]
 the program execution starts in the "maiwn" function
 expressions can be grouped in parentheses to change their precedence
-
+end of line requires an ;
 
 [Comment]
 ~nyaa This is a comment
@@ -30,17 +30,17 @@ TODO: stderr
 
 
 [assignment]
-foo:stwing iws 'hewwo'
-bar:iwnt iws 5 pwus 10
-foobar:chaw iws awway[5] iws ['h','e','w','w','o']
-foobruh:chaw iws foobar[3]
+foo:stwing iws 'hewwo';
+bar:iwnt iws 5 pwus 10;
+foobar:chaw iws awway[5] iws ['h','e','w','w','o'];
+foobruh:chaw iws foobar[3];
 
 
 [casting]
 changing the type of a var
 TODOO: change floats
-yeet<char>(5)
-moans(yeet<stwing>(34 pwus 35))
+yeet<char>(5);
+moans(yeet<stwing>(34 pwus 35));
 
 
 [conditionals]
@@ -54,11 +54,11 @@ moans(yeet<stwing>(34 pwus 35))
 you can string conditions together with "and" (acts like &&) and "or" (acts like ||)
 
 *notices cute eqwall twoo 'yes'* or *notices cute not eqwall twoo 'no'* {
-    moans('I wuv u UwU')
+    moans('I wuv u UwU');
 } but *notices cute eqwall twoo 'a bit'* {
-    moans('I wuv u >w<')
-} *is oblivious* {
-    moans('I wuv u anyway >w<')
+    moans('I wuv u >w<');
+} *is oblivious* 
+    moans('I wuv u anyway >w<');
 }
 
 
@@ -66,15 +66,15 @@ you can string conditions together with "and" (acts like &&) and "or" (acts like
 can be broken with "bonk"
 
 whiwe *notices True* {
-    moans('Hawdew Daddy!')
+    moans('Hawdew Daddy!');
 }
 
 [functions]
 nuzzles isHorny(isDaddyHome:boolean, isLockedUp:boolean) -> boolean {
     *notices isDaddyHome* and *notices isLockedUp iws not eqwall twoo true*{
-        wetuwn True
+        wetuwn True;
     } *is oblivious* {
-        wetuwn True
+        wetuwn True;
     }
 }
 
