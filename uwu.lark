@@ -1,0 +1,42 @@
+start: statement_list
+
+statement_list: statement | statement statement_list
+
+statement: assignment
+    // | block
+    // | while_statement
+    // | if_statement            
+
+assignment: /\w+/ ":" type "iws" expression
+
+type: "iwnt"
+    | "floawt"
+    | "chaw"
+    | "stwing"
+    | "boolean"
+    | "voiwd"
+
+expression: STRING ";"
+
+operator: plus
+    | minus
+    | multiply
+    | divide
+
+plus: "pwus"
+minus: "minwus"
+multiply: "twimes"
+divide: "diwide"
+
+// block: "{" statement_list "}"
+// 
+// while_statement: block
+// 
+// if_statement: block
+
+STRING : /("|').*?(?<!\\)("|')/
+
+%import common.SIGNED_NUMBER    -> NUMBER
+
+%import common.WS
+%ignore WS
