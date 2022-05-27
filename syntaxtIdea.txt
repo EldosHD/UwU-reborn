@@ -1,16 +1,20 @@
 [additional specification]
 the program execution starts in the "maiwn" function
+expressions can be grouped in parentheses to change their precedence
+
 
 [Comment]
 ~nyaa This is a comment
+
 
 [types]
 64 bit signed int: iwnt
 32 bit signed float: floawt
 8 bit char: chaw
 XX bit string: stwing
-1 bit boolean: TODO: boolean (accepts true, True, 1 || false,False,0)
+1 bit boolean: boolean (accepts true, True, 1 || false,False,0)
 empty byte: voiwd
+
 
 [Operators]
 [+] : pwus
@@ -18,9 +22,11 @@ empty byte: voiwd
 [*] : twimes
 [/] : diwide
 
+
 [instruction]
 [paws] : noop instruction
 [moans(stwing)]  : print to stdout
+TODO: stderr
 
 
 [assignment]
@@ -29,17 +35,46 @@ bar:iwnt iws 5 pwus 10
 foobar:chaw iws awway[5] iws ['h','e','w','w','o']
 foobruh:chaw iws foobar[3]
 
+
+[casting]
+changing the type of a var
+TODOO: change floats
+yeet<char>(5)
+moans(yeet<stwing>(34 pwus 35))
+
+
 [conditionals]
 [>]  : 1 gweatew twan 0
 [<]  : 0 wess twan 1
 [==] : 1 eqwall twoo 1
+[!=] : 1 not eqwall twoo 0
+
 
 [If-elif-else statement]
-*notices cute eqwall twoo 'yes'*
-    moans('I wuv u UwU')
-but *notices cute eqwall twoo 'a bit'*
-    moans('I wuv u >w<')
-*is oblivious*
-    moans('I wuv u anyway >w<')
+you can string conditions together with "and" (acts like &&) and "or" (acts like ||)
 
+*notices cute eqwall twoo 'yes'* or *notices cute not eqwall twoo 'no'* {
+    moans('I wuv u UwU')
+} but *notices cute eqwall twoo 'a bit'* {
+    moans('I wuv u >w<')
+} *is oblivious* {
+    moans('I wuv u anyway >w<')
+}
+
+
+[while loop]
+can be broken with "bonk"
+
+whiwe *notices True* {
+    moans('Hawdew Daddy!')
+}
+
+[functions]
+nuzzles isHorny(isDaddyHome:boolean, isLockedUp:boolean) -> boolean {
+    *notices isDaddyHome* and *notices isLockedUp iws not eqwall twoo true*{
+        wetuwn True
+    } *is oblivious* {
+        wetuwn True
+    }
+}
 
