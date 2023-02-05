@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "uwu-reborn"
+version = "0.1.0"
+description = "RUN"
+authors = ["EldosHD <Eldos.sonofelax@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "uwu_reborn"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+lark = "^1.1.5"
+rich = "^13.3.1"
+typer = "^0.7.0"
+llvmlite = "^0.39.1"
+pytest = "^7.2.1"
+black = "^23.1.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
