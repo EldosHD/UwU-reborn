@@ -1,4 +1,3 @@
-foo:stwing iws 'hewwo';
-bar:iwnt iws 5 pwus 10;
-foobar:chaw iws awway[5] wif ['h','e','w','w','o'];
-nobar:iwnt iws awway[4];
+nuzzles maiwn() -> iwnt {
+    wetuwn 0;
+}

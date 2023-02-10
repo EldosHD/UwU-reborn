@@ -1,55 +1,18 @@
-start: statement_list
-
-statement_list: statement | statement statement_list
-
-statement: assignment
-        | operation
-    // | block
-    // | while_statement
-    // | if_statement            
-
-assignment: var_assignment | array_assignment
-
-var_assignment: /\w+/ ":" TYPE "iws" expression ";"
-
-array_assignment: /\w+/ ":" TYPE "iws awway[" INT "];"
-    | /\w+/ ":" TYPE "iws awway[" INT "] wif [" (STRING|INT|FLOAT)(","(STRING|INT|FLOAT))* "];"
-
-TYPE: "iwnt"
-    | "floawt"
-    | "chaw"
-    | "stwing"
-    | "boolean"
-    | "voiwd"
-
-
-expression: value | statement_list
-
-value: STRING
-    | INT
-    | FLOAT
-
-operation: expression operator expression
-
-operator: PLUS
-    | MINUS
-    | MULTIPLY
-    | DIVIDE
-
-PLUS : "pwus"
-MINUS : "minwus"
-MULTIPLY : "twimes"
-DIVIDE : "diwide"
-
-// block: "{" statement_list "}"
-// 
-// while_statement: block
-// 
-// if_statement: block
-
-STRING : /("|').*?(?<!\\)("|')/
-INT : /-?\d+/
-FLOAT : /-?\d+\.\d+/
-
 %import common.WS
+%import common.CNAME
+%import common.NUMBER
+
+LITERAL: NUMBER
+IDENTIFIER: CNAME
+
+!return_statement: "wetuwn" expr ";"
+func_dev: "nuzzles" IDENTIFIER "(" (IDENTIFIER IDENTIFIER)? ("," IDENTIFIER IDENTIFIER)* ")" "->" IDENTIFIER block
+
+!expr: LITERAL
+
+?statement: return_statement
+!block: "{" statement* "}"
+
+program: func_dev+
+
 %ignore WS
